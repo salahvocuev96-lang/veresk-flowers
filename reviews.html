@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отзывы — Вереск</title>
+<meta name="description" content="Отзывы клиентов цветочного ателье «Вереск» (демо).">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="reviews">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="container page-head"><nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li aria-current="page">Отзывы</li></ol></nav><h1 class="h1">Отзывы клиентов</h1></section>
+<section class="container"><div class="rating" id="rating" style="margin-bottom:2.5rem"></div></section>
+<section class="section section--surface" style="padding-top:3rem"><div class="container">
+  <div class="reviews" id="all-reviews" data-reveal style="margin-bottom:4rem"></div>
+  <div class="split" style="align-items:start">
+    <div><h2 class="h2">Оставить отзыв</h2><p class="muted" style="margin-top:1rem">Демо-режим: отзыв сохранится только в вашем браузере.</p></div>
+    <form class="form" id="review-form" novalidate>
+      <div class="field"><label for="r-name2">Имя <span aria-hidden="true">*</span></label><input id="r-name2" name="rname" autocomplete="name" required></div>
+      <fieldset class="fieldset" style="gap:.5rem"><legend class="legend" style="font-family:var(--font-sans);font-size:var(--fs-12);margin:0">Оценка</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="rating" value="5" checked><span>5 ★</span></label><label class="opt"><input type="radio" name="rating" value="4" ><span>4 ★</span></label><label class="opt"><input type="radio" name="rating" value="3" ><span>3 ★</span></label><label class="opt"><input type="radio" name="rating" value="2" ><span>2 ★</span></label><label class="opt"><input type="radio" name="rating" value="1" ><span>1 ★</span></label></div></fieldset>
+      <div class="field"><label for="r-text">Отзыв <span aria-hidden="true">*</span></label><textarea id="r-text" name="rtext" required></textarea></div>
+      <button class="btn btn--primary" type="submit">Опубликовать</button>
+    </form>
+  </div>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

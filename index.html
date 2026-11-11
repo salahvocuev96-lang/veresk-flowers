@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вереск — авторские букеты с доставкой по Москве</title>
+<meta name="description" content="Цветочное ателье «Вереск»: авторские букеты, розы, пионы, тюльпаны и сезонные цветы. Собираем под заказ, присылаем фото перед отправкой. Демонстрационный проект.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero1.webp" as="image" media="(min-width: 768px)">
+<link rel="preload" href="assets/img/hero1-m.webp" as="image" media="(max-width: 767px)">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header id="site-header"></header>
+
+<main id="main">
+  <!-- 1. Главный баннер-слайдер -->
+  <section class="hero" aria-roledescription="carousel" aria-label="Коллекции ателье">
+    <div class="hero__media">
+      <div class="hero__slide is-active">
+        <picture><source media="(max-width: 767px)" srcset="assets/img/hero1-m.webp"><img src="assets/img/hero1.webp" alt="Нежное поле розовой космеи" width="1920" height="1080" fetchpriority="high"></picture>
+      </div>
+      <div class="hero__slide">
+        <picture><source media="(max-width: 767px)" srcset="assets/img/hero2-m.webp"><img src="assets/img/hero2.webp" alt="Тёмный осенний букет с георгинами и розами" width="1920" height="1080" loading="lazy"></picture>
+      </div>
+      <div class="hero__slide">
+        <picture><source media="(max-width: 767px)" srcset="assets/img/hero3-m.webp"><img src="assets/img/hero3.webp" alt="Пышный авторский букет в пастельной гамме" width="1920" height="1080" loading="lazy"></picture>
+      </div>
+    </div>
+    <div class="hero__content">
+      <div class="container">
+        <div class="hero__text">
+          <div class="hero__copy is-active">
+            <p class="label hero__eyebrow">Цветочное ателье · Москва</p>
+            <h1 class="hero__title">Букеты, которые хочется запомнить</h1>
+            <p class="hero__sub">Собираем каждый букет под заказ из свежих цветов и присылаем фото перед отправкой.</p>
+            <a class="btn btn--light" href="catalog.html">Выбрать букет</a>
+          </div>
+          <div class="hero__copy" aria-hidden="true">
+            <p class="label hero__eyebrow">Сезонная коллекция</p>
+            <p class="hero__title">Поздний сад</p>
+            <p class="hero__sub">Винные георгины, бархатные розы и глубокая зелень — осень в самом насыщенном цвете.</p>
+            <a class="btn btn--light" href="catalog.html?cat=sezonnye" tabindex="-1">Смотреть коллекцию</a>
+          </div>
+          <div class="hero__copy" aria-hidden="true">
+            <p class="label hero__eyebrow">Индивидуальный заказ</p>
+            <p class="hero__title">Соберём букет по&nbsp;вашему описанию</p>
+            <p class="hero__sub">Расскажите о поводе и любимых цветах — флорист предложит варианты за 15 минут.</p>
+            <a class="btn btn--light" href="contacts.html#order" tabindex="-1">Оставить заявку</a>
+          </div>
+          <div class="hero__ctrl">
+            <div class="hero__dots" role="group" aria-label="Слайды">
+              <button class="hero__dot" type="button" aria-label="Слайд 1"><span></span></button>
+              <button class="hero__dot" type="button" aria-label="Слайд 2"><span></span></button>
+              <button class="hero__dot" type="button" aria-label="Слайд 3"><span></span></button>
+            </div>
+            <button class="hero__pause" type="button" aria-label="Остановить показ"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Каталог (категории) -->
+  <section class="section" aria-labelledby="h-cats">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-cats">Каталог</h2><a class="link-arrow" href="catalog.html">Весь каталог <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cats" id="home-cats" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- 3. Сейчас в сезоне -->
+  <section class="section section--tight" aria-labelledby="h-season">
+    <div class="container">
+      <div class="section__head"><div><p class="label">Ноябрь</p><h2 class="h2" id="h-season" style="margin-top:.5rem">Сейчас в сезоне</h2></div><a class="link-arrow" href="catalog.html?cat=sezonnye">Все сезонные <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="grid" id="home-season" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- 4. Сезонная коллекция (баннер) -->
+  <section class="section section--tight" aria-labelledby="h-collection">
+    <div class="container">
+      <div class="banner" data-reveal>
+        <picture><source media="(max-width: 767px)" srcset="assets/img/banner-season-m.webp"><img src="assets/img/banner-season.webp" alt="" width="1920" height="1080" loading="lazy"></picture>
+        <div class="banner__in">
+          <p class="label">Коллекция осень — зима</p>
+          <h2 class="banner__title" id="h-collection">Глубокие оттенки холодного сезона</h2>
+          <p>Бордо, слива и терракота: девять новых букетов, которые выглядят особенно ярко на фоне серого ноябрьского неба.</p>
+          <a class="btn btn--ghost-light" href="catalog.html?cat=sezonnye">Смотреть коллекцию</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Популярные букеты -->
+  <section class="section" aria-labelledby="h-pop">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-pop">Популярные букеты</h2><div class="tabs" id="pop-tabs" role="tablist" aria-label="Фильтр популярных букетов"></div></div>
+      <div class="grid" id="home-popular" role="tabpanel" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- 6. Бестселлеры -->
+  <section class="section section--tight" aria-labelledby="h-best">
+    <div class="container">
+      <div class="best">
+        <div class="banner" data-reveal>
+          <img src="assets/img/banner-best.webp" alt="" width="1120" height="1400" loading="lazy">
+          <div class="banner__in">
+            <p class="label">Выбор наших клиентов</p>
+            <h2 class="banner__title" id="h-best">Бестселлеры</h2>
+            <p>Букеты, которые заказывают чаще всего — проверенная классика и любимые авторские сборки.</p>
+            <a class="btn btn--ghost-light" href="catalog.html?sort=popular">Все хиты</a>
+          </div>
+        </div>
+        <div class="best__grid" id="home-best" data-reveal></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. История / О нас -->
+  <section class="section" aria-labelledby="h-about">
+    <div class="container split">
+      <div class="split__img" data-reveal><img src="assets/img/about-m.webp" alt="Ваза с ветвями в светлом интерьере студии" width="800" height="1000" loading="lazy"></div>
+      <div data-reveal>
+        <p class="label" id="h-about">О нас</p>
+        <h2 class="quote">«Мы собираем букеты так, будто дарим их сами — без спешки и шаблонов»</h2>
+        <p class="quote-by">— команда ателье «Вереск»</p>
+        <p>«Вереск» — небольшое цветочное ателье с собственной мастерской. Мы не держим склад срезанных цветов: закупаем их под заказы несколько раз в неделю и собираем каждый букет вручную.</p>
+        <p>Наш принцип — честный совет вместо навязчивых продаж. Подскажем, какие цветы простоят дольше, что уместно для повода и как уложиться в бюджет.</p>
+        <div class="facts">
+          <div data-stagger><span class="fact__n">10</span><span class="fact__t">лет собираем букеты (демо)</span></div>
+          <div data-stagger><span class="fact__n">2 ч</span><span class="fact__t">срочная доставка по Москве</span></div>
+          <div data-stagger><span class="fact__n">100%</span><span class="fact__t">букетов — с фото перед отправкой</span></div>
+        </div>
+        <a class="link-arrow" href="about.html">История ателье <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Контроль качества -->
+  <section class="section section--tight" aria-labelledby="h-quality">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-quality">Контроль качества на каждом этапе</h2></div>
+      <div class="quality" data-reveal>
+        <div class="q" data-stagger><div class="q__img"><img src="assets/img/b24-s.webp" alt="Свежесрезанные полевые цветы" width="400" height="500" loading="lazy"><span class="q__num">01</span></div><h3 class="q__title">Свежие цветы</h3><p class="q__text">Закупаем под заказы и не храним на складе</p></div>
+        <div class="q" data-stagger><div class="q__img"><img src="assets/img/b13-s.webp" alt="Роза в стеклянной вазе" width="400" height="500" loading="lazy"><span class="q__num">02</span></div><h3 class="q__title">Фото до отправки</h3><p class="q__text">Букет не уедет без вашего одобрения</p></div>
+        <div class="q" data-stagger><div class="q__img"><img src="assets/img/b10-s.webp" alt="Букет белых роз в крафтовой упаковке" width="400" height="500" loading="lazy"><span class="q__num">03</span></div><h3 class="q__title">Бережная упаковка</h3><p class="q__text">Аквабокс, подкормка и инструкция по уходу</p></div>
+        <div class="q" data-stagger><div class="q__img"><div class="q__chat" aria-label="Пример переписки с клиентом"><p class="bubble">Здравствуйте, Анна! Как поживает букет из пионов?</p><p class="bubble bubble--me">Стоит уже 10 дней, все спрашивают, где заказывала!</p><p class="bubble">Как приятно! Спасибо, что рассказали</p></div><span class="q__num" style="color:var(--color-fg);text-shadow:none">04</span></div><h3 class="q__title">Обратная связь</h3><p class="q__text">Спрашиваем, как стоят цветы, и улучшаем сервис</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Преимущества -->
+  <section class="section section--tight" aria-labelledby="h-adv">
+    <div class="container">
+      <h2 class="sr-only" id="h-adv">Почему выбирают «Вереск»</h2>
+      <div class="adv" data-reveal>
+        <div class="adv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg><h3 class="adv__title">Авторский подход</h3><p>Нет одинаковых букетов — каждый собирается вручную под ваш повод.</p></div>
+        <div class="adv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 18V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg><h3 class="adv__title">Доставка за 2 часа</h3><p>Круглосуточно по Москве и области, точный двухчасовой интервал.</p></div>
+        <div class="adv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg><h3 class="adv__title">Гарантия свежести</h3><p>Если букет завянет раньше срока — заменим бесплатно.</p></div>
+        <div class="adv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><h3 class="adv__title">Открытка от руки</h3><p>Подпишем ваши пожелания на фирменной карточке бесплатно.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Подобрать букет -->
+  <section class="section" aria-labelledby="h-pick">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-pick">Подобрать букет</h2></div>
+      <div class="picker" id="picker"></div>
+    </div>
+  </section>
+
+  <!-- 11. Отзывы -->
+  <section class="section section--surface" aria-labelledby="h-rev">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-rev">Отзывы</h2><a class="link-arrow" href="reviews.html">Все отзывы <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="reviews" id="home-reviews" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- 12. FAQ -->
+  <section class="section" aria-labelledby="h-faq">
+    <div class="container faq-wrap">
+      <div>
+        <h2 class="h2" id="h-faq">Вопросы и ответы</h2>
+        <p class="muted" style="margin:1rem 0 1.5rem">Не нашли ответ? Напишите нам — флорист ответит в течение 15 минут.</p>
+        <a class="link-arrow" href="faq.html">Все вопросы <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div id="home-faq"></div>
+    </div>
+  </section>
+
+  <!-- 13. Доставка -->
+  <section class="section section--surface" aria-labelledby="h-del">
+    <div class="container">
+      <div class="section__head"><h2 class="h2" id="h-del">Доставка по Москве и области</h2><a class="link-arrow" href="delivery.html">Доставка и оплата <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="deliv" data-reveal>
+        <div class="deliv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="deliv__big">от 2 часов</span><p>Срочная доставка в пределах МКАД</p></div>
+        <div class="deliv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 18V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg><span class="deliv__big">0 ₽</span><p>Бесплатно при заказе от 15 000 ₽</p></div>
+        <div class="deliv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14.5 4h-5L7.5 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.5l-2-3Z"/><circle cx="12" cy="13" r="3.5"/></svg><span class="deliv__big">Фото</span><p>Покажем букет перед отправкой</p></div>
+        <div class="deliv__item" data-stagger><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="deliv__big">24/7</span><p>Круглосуточно при заказе до 20:00</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. Контакты + индивидуальный заказ -->
+  <section class="section" aria-labelledby="h-contact">
+    <div class="container contact">
+      <div>
+        <p class="label">Контакты</p>
+        <h2 class="h2" id="h-contact" style="margin-top:.75rem">Приезжайте в студию или напишите нам</h2>
+        <ul class="contact__list">
+          <li class="contact__item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div>Москва, ул. Садовая, 1 (демо-адрес)<br><span class="muted small">Ежедневно 8:00–22:00</span></div></li>
+          <li class="contact__item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><div><a href="tel:+74950000000">+7 (495) 000-00-00</a><br><span class="muted small">Telegram · WhatsApp</span></div></li>
+          <li class="contact__item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><a href="mailto:hello@veresk.example">hello@veresk.example</a></div></li>
+        </ul>
+        <a class="link-arrow" href="contacts.html">Как добраться <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div>
+        <h3 class="h3" style="margin-bottom:.5rem">Индивидуальный заказ</h3>
+        <p class="muted">Опишите повод, бюджет и пожелания — флорист предложит 2–3 варианта.</p>
+        <form class="form" data-demo-form novalidate style="margin-top:1.5rem">
+          <div class="form__row">
+            <div class="field"><label for="o-name">Имя <span aria-hidden="true">*</span></label><input id="o-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="o-phone">Телефон <span aria-hidden="true">*</span></label><input id="o-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></div>
+          </div>
+          <div class="field"><label for="o-msg">Пожелания</label><textarea id="o-msg" name="msg" placeholder="Например: букет маме на юбилей, нежные оттенки, до 12 000 ₽"></textarea></div>
+          <label class="check"><input type="checkbox" name="agree" required> Согласен(на) на обработку персональных данных</label>
+          <button class="btn btn--primary" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

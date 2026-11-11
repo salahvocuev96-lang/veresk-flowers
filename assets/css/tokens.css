@@ -1,0 +1,132 @@
+/* =========================================================
+   VERESK — Design Tokens
+   Three-layer architecture (design-system skill):
+   Primitive → Semantic → Component
+   ========================================================= */
+
+/* ---------- Fonts (self-hosted, font-display: swap) ---------- */
+@font-face{font-family:"Cormorant";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant";font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-cyrillic-500-italic.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant";font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-latin-500-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/montserrat-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/montserrat-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/montserrat-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/montserrat-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/montserrat-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/montserrat-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  /* ================= 1. PRIMITIVE ================= */
+  /* Stone neutrals (warm) */
+  --stone-0:#FFFFFF;
+  --stone-50:#FAFAF9;
+  --stone-100:#F3F1EE;
+  --stone-150:#ECE9E5;
+  --stone-200:#E3DFDA;
+  --stone-300:#D6D3D1;
+  --stone-500:#78716C;
+  --stone-600:#5F5A55;
+  --stone-700:#44403C;
+  --stone-900:#1C1917;
+  /* Heather (brand) */
+  --heather-50:#F6EEF2;
+  --heather-100:#EBDAE3;
+  --heather-600:#8A3D62;
+  --heather-700:#7A3456;
+  --heather-800:#652A47;
+  /* Supporting */
+  --gold-600:#A16207;
+  --sage-600:#4F6B52;
+  --red-600:#B42318;
+
+  /* Spacing (4px base) */
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem;
+  --space-12:3rem; --space-16:4rem; --space-20:5rem; --space-24:6rem;
+
+  /* Type */
+  --font-serif:"Cormorant","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --font-sans:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --fs-11:.6875rem; --fs-12:.75rem; --fs-13:.8125rem; --fs-14:.875rem; --fs-15:.9375rem; --fs-16:1rem;
+  --fs-18:1.125rem; --fs-20:1.25rem; --fs-22:1.375rem; --fs-26:1.625rem; --fs-32:2rem;
+  --fs-40:2.5rem; --fs-56:3.5rem; --fs-72:4.5rem;
+
+  /* Radius — restrained, not "bubbly" */
+  --radius-0:0; --radius-2:2px; --radius-4:4px; --radius-6:6px; --radius-full:999px;
+
+  /* Shadows (one consistent elevation scale) */
+  --shadow-1:0 1px 2px rgb(28 25 23 / .06);
+  --shadow-2:0 8px 24px rgb(28 25 23 / .08);
+  --shadow-3:0 24px 64px rgb(28 25 23 / .16);
+
+  /* Motion */
+  --dur-1:150ms; --dur-2:240ms; --dur-3:420ms; --dur-4:700ms;
+  --ease-out:cubic-bezier(.22,.61,.36,1);
+  --ease-in:cubic-bezier(.55,.06,.68,.19);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+
+  /* Z-index scale */
+  --z-base:0; --z-raised:10; --z-sticky:40; --z-overlay:90; --z-drawer:100; --z-toast:1000;
+
+  /* ================= 2. SEMANTIC ================= */
+  --color-bg:var(--stone-0);
+  --color-surface:var(--stone-100);
+  --color-surface-2:var(--stone-150);
+  --color-placeholder:var(--stone-200);
+  --color-fg:var(--stone-900);
+  --color-fg-2:var(--stone-700);
+  --color-muted:var(--stone-600);          /* 6.8:1 on white */
+  --color-border:var(--stone-200);
+  --color-border-strong:var(--stone-300);
+  --color-primary:var(--heather-700);      /* 8.6:1 on white */
+  --color-primary-hover:var(--heather-800);
+  --color-on-primary:var(--stone-0);
+  --color-primary-soft:var(--heather-50);
+  --color-accent-gold:var(--gold-600);
+  --color-success:var(--sage-600);
+  --color-danger:var(--red-600);
+  --color-ring:var(--heather-600);
+  --color-overlay:rgb(28 25 23 / .45);
+
+  --text-display:clamp(2.5rem,1.6rem + 3.6vw,4.5rem);
+  --text-h1:clamp(2.125rem,1.6rem + 2vw,3.5rem);
+  --text-h2:clamp(1.75rem,1.4rem + 1.3vw,2.5rem);
+  --text-h3:clamp(1.375rem,1.2rem + .6vw,1.625rem);
+  --text-body:var(--fs-15);
+  --text-small:var(--fs-13);
+  --text-label:var(--fs-11);
+  --tracking-label:.16em;
+
+  --container:1360px;
+  --gutter:clamp(1rem,.5rem + 2vw,2.5rem);
+  --section-y:clamp(3.5rem,2.5rem + 4vw,7rem);
+  --header-h:72px;
+
+  /* ================= 3. COMPONENT ================= */
+  --button-h:52px;
+  --button-h-sm:40px;
+  --button-radius:var(--radius-4);
+  --button-bg:var(--color-primary);
+  --button-bg-hover:var(--color-primary-hover);
+  --button-fg:var(--color-on-primary);
+  --button-outline-border:var(--color-fg);
+
+  --card-img-ratio:4 / 5;
+  --card-img-radius:var(--radius-4);
+  --card-gap:clamp(.75rem,.5rem + 1vw,1.5rem);
+
+  --input-h:52px;
+  --input-border:var(--color-border-strong);
+  --input-border-focus:var(--color-fg);
+  --input-radius:var(--radius-4);
+
+  --chip-h:36px;
+  --badge-bg:rgb(255 255 255 / .92);
+
+  --header-bg:rgb(255 255 255 / .96);
+  --footer-bg:var(--color-surface);
+}
+@media (max-width:767px){ :root{ --header-h:60px; --button-h:50px; } }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог букетов — Вереск</title>
+<meta name="description" content="Каталог авторских букетов, роз, пионов и тюльпанов с доставкой по Москве. Фильтры по поводу, цветам, цвету и цене.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="catalog">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="container page-head" style="padding-bottom:0">
+  <nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог букетов</a></li><li aria-current="page" id="crumb-cur">Каталог</li></ol></nav>
+  <h1 class="h1" id="cat-title">Каталог букетов</h1>
+  <div class="subcats" id="subcats" role="group" aria-label="Разделы каталога"></div>
+</section>
+<section class="container" style="margin-top:1.5rem">
+  <div class="toolbar">
+    <div class="toolbar__left"><span class="toolbar__count" id="cat-count" aria-live="polite"></span><div class="active-filters" id="active-filters"></div></div>
+    <div class="toolbar__right">
+      <label class="sort"><span class="muted">Сортировка:</span><select id="sort" aria-label="Сортировка"><option value="popular">Популярные</option><option value="new">Новинки</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></label>
+      <button class="btn btn--outline btn--sm" type="button" id="filter-open" aria-controls="filters"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg> Фильтр <span id="filter-btn-n"></span></button>
+    </div>
+  </div>
+  <div class="grid" id="cat-grid" data-reveal></div>
+  <div class="seo">
+    <h2>Букеты с доставкой по Москве</h2>
+    <p>В каталоге «Вереска» — авторские букеты, монобукеты из роз, пионов и тюльпанов, сезонные цветы и композиции в вазах и корзинах. Каждый букет собираем под заказ, поэтому цветы приезжают свежими и стоят дольше. Не нашли подходящий вариант — <a href="contacts.html#order" style="text-decoration:underline">оставьте заявку на индивидуальный букет</a>.</p>
+  </div>
+</section>
+<div class="drawer drawer--right" id="filters" role="dialog" aria-modal="true" aria-labelledby="filters-title" hidden>
+  <div class="drawer__head"><h2 class="drawer__title" id="filters-title">Фильтры</h2><button class="icon-btn" type="button" aria-label="Закрыть фильтры" data-close><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+  <div class="drawer__body"><div class="filters" id="filters-body"></div></div>
+  <div class="drawer__foot filters__foot"><button class="btn btn--outline" type="button" id="filters-reset">Сбросить</button><button class="btn btn--primary" type="button" id="filters-apply">Показать</button></div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>
